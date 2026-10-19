@@ -1,2 +1,12 @@
-import { defineConfig } from 'vite';
-export default defineConfig({ base: process.env.GITHUB_PAGES_BASE || '/objective-os/' });
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  base: '/Objectives-2.0/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets'
+  }
+})
